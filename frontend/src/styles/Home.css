@@ -1,0 +1,6 @@
+.card-grid {
+    margin: 50px;
+    max-width: 90vw;
+    columns: 2;
+    overflow:visible;
+}
