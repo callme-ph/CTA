@@ -33,7 +33,6 @@ function Presenca() {
       }
     }
   };
-
   return (
     <div className="presenca-container">
       <div className="presenca-card">
