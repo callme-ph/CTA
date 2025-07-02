@@ -51,9 +51,11 @@ function Home() {
           <Card
             key={ubs.id || index}
             name={ubs.nome}
-            address={ubs.endereco}
+            address={`${ubs.endereco?.rua}, ${ubs.endereco?.numero} - ${ubs.endereco?.bairro}, ${ubs.endereco?.cidade}/${ubs.endereco?.estado}`}
             hours={ubs.telefone}
-            services={ubs.medicos}
+            services={Array.isArray(ubs.medicos)
+              ? ubs.medicos.map(m => `${m.nome} (${m.especialidade}) - ${m.status}`).join(" | ")
+              : "Nenhum médico disponível"}
           />
         ))}
         {/* ... seu card de exemplo ... */}
