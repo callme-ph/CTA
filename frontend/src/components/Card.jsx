@@ -8,19 +8,26 @@ const Card = ({ name, address, hours, services, image }) => {
 
       <div className="card-info">
         <p><strong>Endereço:</strong> {address}</p>
-        <p><strong>Horário de Funcionamento:</strong> {hours}</p>
+        <p><strong>Telefone:</strong> {hours}</p>
+
         <div>
           <strong>Serviços:</strong>
-          <ul className="card-services">
-            {services.map((service, index) => (
-              <li key={index}>{service}</li>
-            ))}
-          </ul>
-
-          <button className="card-button">
-            Mais informações
-          </button>
+          {Array.isArray(services) ? (
+            <ul className="card-services">
+              {services.map((service, index) => (
+                <li key={index}>
+                  {service.nome} ({service.especialidade}) - {service.status}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>{services || "Nenhum serviço disponível"}</p>
+          )}
         </div>
+
+        <button className="card-button">
+          Mais informações
+        </button>
       </div>
     </div>
   );
