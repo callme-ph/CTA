@@ -1,0 +1,174 @@
+/* Fundo escuro atrás do modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* fundo preto semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Janela do modal */
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh; /* impede que o modal ultrapasse a tela */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .modal-scroll-content {
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 0.5rem; /* evita que o conteúdo fique encostado */
+  }
+  
+  /* Scrollbar elegante e discreta para navegadores que suportam */
+  .modal-scroll-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .modal-scroll-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .modal-scroll-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Firefox */
+  .modal-scroll-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+  
+  /* Animação suave de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Botão fechar (opcionalmente estilizado) */
+  .modal-content button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    bottom: 50%;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+
+  .medico-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .medico-box {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .status-indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .modal-titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Box genérico das seções */
+  .modal-box {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .modal-box h4 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .medico-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .medico-box {
+    background-color: #ffffff;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    border-left: 4px solid #ccc;
+  }
+  
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .status-indicador {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .status-indicador.verde {
+    background-color: #28a745;
+  }
+  
+  .status-indicador.vermelho {
+    background-color: #dc3545;
+  }
+  

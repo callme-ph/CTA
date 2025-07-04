@@ -1,0 +1,15 @@
+:root  {
+    --back_img: import.meta.env.back_img;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*background-image: url(../assets/white.jpg);*/
+    background-color: #f7f9fb;
+}
+  
+  * {
+    box-sizing:border-box;
+  }
