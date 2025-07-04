@@ -10,6 +10,16 @@ function Home() {
   const API_URL = import.meta.env.VITE_API_url+'/api/ubs/'; // || 'http://127.0.0.1:8000/api/ubs/';
 
   const [ubsList, setUbsList] = useState([]);
+  const [filtro, setFiltro] = useState("");
+
+  const ubsFiltradas = ubsList.filter((ubs) => {
+    const texto = filtro.toLowerCase();
+    return (
+      ubs.nome?.toLowerCase().includes(texto) ||
+      ubs.endereco?.rua?.toLowerCase().includes(texto) ||
+      ubs.medicos?.some(m => m.especialidade?.toLowerCase().includes(texto))
+    );
+  });
 
   useEffect(() => {
     const controller = new AbortController();
@@ -60,8 +70,17 @@ function Home() {
   return (
     <div>
       <TopBar />
+      
+      <input
+        type="text"
+        placeholder="Pesquisar por nome, endereço ou serviço..."
+        value={filtro}
+        onChange={(e) => setFiltro(e.target.value)}
+        className="search-bar"
+      />
+
       <div className="card-grid">
-        {ubsList.map((ubs, index) => (
+        {ubsFiltradas.map((ubs, index) => (
           <Card
             onVerMais={() => handleVerMais(ubs)}
             key={ubs.id || index}

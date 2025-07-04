@@ -6,10 +6,10 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    background-image: url(../assets/white.jpg);  
+    /*background-image: url(../assets/white.jpg);*/
+    background-color: #f7f9fb;
 }
   
   * {
-    box-sizing: border-box;
+    box-sizing:border-box;
   }
