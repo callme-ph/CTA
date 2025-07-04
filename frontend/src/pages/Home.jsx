@@ -127,10 +127,10 @@ function Home() {
                         <div className="status">
                           <span
                             className={`status-indicador ${
-                              m.status === "presente" ? "verde" : "vermelho"
+                              m.status === "Presente" ? "verde" : "vermelho"
                             }`}
                           ></span>
-                          <span>{m.status === "presente" ? "Presente" : "Ausente"}</span>
+                          <span>{m.status === "Presente" ? "Atendendo" : "Ausente"}</span>
                         </div>
                       </div>
                     ))
