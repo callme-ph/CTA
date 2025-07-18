@@ -8,7 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",
-    "build": "react-scripts build && cp build/index.html build/404.html",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
