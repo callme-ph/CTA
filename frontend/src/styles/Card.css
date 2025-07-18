@@ -1,18 +1,31 @@
 .card {
     max-width: 400px;
     min-width: 350px;
-    max-height: 250px;
+    max-height: 350px;
     min-height: 250px;
-    margin: 1rem auto;
+    border-radius: 5px;
+    position: relative;
+    width: 100%; /* ocupa a coluna inteira */
+    margin: 0 auto;
     padding: 1.5rem;
     background-color: #ffffff;
-    border-radius: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-family: sans-serif;
-    /*height:max-content;*/
-    position: relative;
-    break-inside: avoid-column;
-    overflow-y: scroll;
+    box-sizing: border-box;
+  }
+
+  /* Scrollbar elegante e discreta para navegadores que suportam */
+  .card::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .card::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .card::-webkit-scrollbar-track {
+    background: transparent;
   }
   
   .card-title {
@@ -35,10 +48,15 @@
   }
   
   .card-button {
-    background-color: rgb(108, 248, 178);
-    border-radius: 10px;
+    
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background-color: #1b2e4b;
+    transition: background-color 0.3s;
     border-width: 1px;
-    border-color: rgb(53, 241, 138);
+    border-color: rgb(255, 255, 255);
     height: 5vh;
     font-weight: bold;
     position: absolute;
@@ -47,7 +65,5 @@
   }
 
   .card-button:hover {
-    background-color: rgb(0, 184, 92);
-    color: white;
-
+    background-color: #1565c0;
   }

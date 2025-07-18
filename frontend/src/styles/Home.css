@@ -3,8 +3,40 @@
 }
 
 .card-grid {
-    margin: 50px;
-    max-width: 90vw;
-    columns: 2;
-    overflow:visible;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  padding: 20px;
+  margin: 10px 0px 15px 25px;
+  max-width: 95vw;
+  max-height: 545px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background-color: #e9eff4;
+  box-sizing: border-box;
 }
+
+.card-grid::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .card-grid::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .card-grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 400px;
+    margin: 1.0rem auto 0.25rem;
+    display: block;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
