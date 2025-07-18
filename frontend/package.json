@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "private": true,
+  "homepage": "https://callme-ph.github.io/CTA",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
