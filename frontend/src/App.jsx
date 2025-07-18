@@ -21,7 +21,7 @@ function RegisterAndLogout() {
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.PUBLIC_URL}>
       <Routes>
 
         <Route path = "/manage" element={
